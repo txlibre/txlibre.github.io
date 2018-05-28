@@ -139,9 +139,9 @@ function confirmed (airdrops) {
 
 function augment (airdrops) {
   return airdrops.map(function (airdrop) {
-    airdrop.tx_fee_eth = airdrop.tx_fee * airdrop.eth_tzl_price
-    airdrop.etherscan_link = `https://etherscan.io/tx/${airdrop.txid}`
+    airdrop.tx_fee_eth = (airdrop.tx_fee * airdrop.eth_tzl_price).toFixed(6)
 
+    airdrop.etherscan_link = `https://etherscan.io/tx/${airdrop.txid}`
     return airdrop
   })
 }
