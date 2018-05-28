@@ -76,7 +76,7 @@
 
           <h3 data-id="verify_page_title">Verify your TZL claim</h3>
 
-          <p data-id="verify_intro">Enter your Tezos address (a/k/a Tezos public key hash) to verify the status of your TZL claim</p>
+          <p data-id="verify_intro">Enter your Tezos public key hash (a/k/a Tezos address) to verify the status of your TZL claim</p>
 
           <form action="Javascript:verify()" class="singlerowform" id="verify-form">
             <input type="text" placeholder="tz1..." id="verify-pkh" required>
@@ -102,7 +102,7 @@
           <!-- if requested to split -->
           <div class="formresult" id="verify-split-box" v-if="show">
             <p class="timestamp">{{ timestamp }}</p>
-            <p data-id="verify_result_split">This Ethereum address has been set to receive TZL pre-launch tokens</p>
+            <p data-id="verify_result_split">This Ethereum address has been linked</p>
             <p><strong>{{ eth_addr }}</strong></p>
             <p class="note" data-id="verify_result_dispute">
               <br>Not your Ethereum address?
@@ -152,7 +152,7 @@
               <a href="https://t.me/joinchat/G9-DflMeFgwZSwDI5V-Vew" target="_blank" class="btn">
                 <svg class="icon">
                   <use href="/images/svgdefs.svg#icon-social-telegram-group" />
-                </svg><span data-id="nextstep_group">Join the conversation on Telegram</span></a>
+                </svg><span data-id="nextstep_group">Join the community on Telegram</span></a>
             </p>
 
             <p v-if="show_whale">
@@ -166,7 +166,7 @@
               <a href="https://t.me/joinchat/G9-DflKOVmNQIOUAoplCxQ" target="_blank" class="btn">
                 <svg class="icon">
                   <use href="/images/svgdefs.svg#icon-social-telegram-group" />
-                </svg><span data-id="nextstep_group">Join the conversation on Telegram</span></a>
+                </svg><span data-id="nextstep_group">Join the community on Telegram</span></a>
             </p>
 
           </div>
