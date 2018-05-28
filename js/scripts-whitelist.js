@@ -1,4 +1,5 @@
 const url = 'https://www.tzlibre.io/api/v1/whitelist'
+const TIMEFORMAT = 'MMMM Do YYYY, h:mm a'
 let elements
 
 function get_elements () {
@@ -11,6 +12,7 @@ function get_elements () {
     elements.success_addr = document.getElementById('tzAddressWL')
     elements.success_tzl_amount = document.getElementById('tzBalanceWL')
     elements.success_timestamp = document.getElementById('tzDateWL')
+    elements.claim_link = document.getElementById('whitelist-claimlink')
   }
 
   return elements
@@ -18,7 +20,6 @@ function get_elements () {
 
 function reset () {
   hide_success_box()
-  hide_error_box()
 }
 
 function start_loading () {
@@ -41,30 +42,31 @@ function hide_success_box () {
   get_elements().success_box.style.display = 'none'
 }
 
-function show_error_box () {
-  get_elements().error_box.style.display = 'block'
-}
-
-function hide_error_box () {
-  get_elements().error_box.style.display = 'none'
+function show_error () {
+  showModal('modal-error')
 }
 
 function fill_success_box (wl_json) {
   let elements = get_elements()
   elements.success_addr.innerText = wl_json.pkh
   elements.success_tzl_amount.innerText = `${wl_json.h_TZL} TZL`
-  elements.success_timestamp.innerText = moment(wl_json.whitelist_time.toString())
+  elements.success_timestamp.innerText = moment(wl_json.whitelist_time).format(TIMEFORMAT).toString()
+}
+
+function hide_claim_link () {
+  get_elements().claim_link.style.display = 'none'
 }
 
 function success (wl_json) {
   fill_success_box(wl_json)
+  hide_claim_link()
   stop_loading()
   show_success_box()
 }
 
 function error () {
   stop_loading()
-  show_error_box()
+  show_error()
 }
 
 async function post (pkh) {
