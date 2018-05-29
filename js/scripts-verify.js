@@ -16,6 +16,7 @@ function reset () {
   whitelist_data.show = false
   whitelist_data.not_claimed = false
   split_data.show = false
+  noairdrops_data.show = false
   airdrops_data.show = false
   airdrops_data.rounds = []
   next_steps_data.show = false
@@ -73,6 +74,8 @@ function success_split (split_json) {
     airdrops_data.n_airdrops = split_json.n_airdrops
     airdrops_data.rounds = split_json.airdrops
     airdrops_data.show = true
+  } else {
+    noairdrops_data.show = true
   }
 
   // next_steps
@@ -226,6 +229,15 @@ let split_data = {
 let v_split = new Vue({
   el: '#verify-split-box',
   data: split_data
+})
+
+let noairdrops_data = {
+  show: false
+}
+
+let v_noairdrops = new Vue({
+  el: '#verify-noairdrops-box',
+  data: noairdrops_data
 })
 
 let airdrops_data = {

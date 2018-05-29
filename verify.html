@@ -109,6 +109,20 @@
               <a href="https://t.me/tz_libre" target="_blank">Contact us immediately</a> to dispute this claim</p>
           </div>
 
+          <!-- if not airdropped -->
+          <div class="formresult" id="verify-noairdrops-box" v-if="show">
+            <div class="formresult-cols">
+              <div>
+                <p data-id="verify_result_airdropped">The linked Ethereum received a total of</p>
+                <p class="bigdata">0 TZL</p>
+              </div>
+              <div>
+                <p data-id="verify_result_airdrops">Airdrops</p>
+                <p><strong data-id="verify_result_noairdrops">You haven&apos;t received any airdrop yet</strong></p>
+              </div>
+            </div>
+          </div>
+
           <!-- if airdropped -->
           <div class="formresult" id="verify-airdrops-box" v-if="show">
             <div class="formresult-cols">
@@ -202,12 +216,8 @@
             </div>
 
             <div class="modal" id="modal-not-split">
-              <h4><span data-id="modal_notsplit_title">No TZL claim found</span>
-                <svg class="alert-icon">
-                  <use href="/images/svgdefs.svg#icon-alert" />
-                </svg>
-              </h4>
-              <p data-id="modal_notsplit_text">No TZL tokens have been claimed for this Tezos address, and it is not linked with any Ethereum address yet.</p>
+              <h4><span data-id="modal_notsplit_title">Tezos address whitelisted</span></h4>
+              <p data-id="modal_notsplit_text">Your address is whitelisted, but no TZL tokens have been claimed yet, and it is not linked with any Ethereum address yet.</p>
               <div class="modal-actions">
                 <a class="btn modal-action-cancel" data-id="btn_cancel">Cancel</a>
                 <a class="btn btn-primary" href="split.html" data-id="btn_claim">Claim your TZL</a>
