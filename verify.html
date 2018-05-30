@@ -160,13 +160,20 @@
           <!-- next steps -->
           <div class="nextstepbox" id="verify-next-steps-box" v-if="show">
 
-            <h3 data-id="nextstep_title">Next step</h3>
+            <h3 data-id="nextstep_title">Next steps</h3>
+
+            <p data-id="split_nextstep_intro">To receive all TZL airdrops get active and join the community on Telegram</p>
+
 
             <p v-if="show_good_fellow">
               <a href="https://t.me/joinchat/G9-DflMeFgwZSwDI5V-Vew" target="_blank" class="btn">
                 <svg class="icon">
                   <use href="/images/svgdefs.svg#icon-social-telegram-group" />
-                </svg><span data-id="nextstep_group">Join the community on Telegram</span></a>
+                </svg><span data-id="nextstep_group">Airdrop details</span></a>
+              <a href="https://t.me/tzlibre" target="_blank" class="btn">
+                <svg class="icon">
+                  <use href="/images/svgdefs.svg#icon-social-telegram-channel" />
+                </svg><span data-id="nextstep_channel">Telegram updates</span></a>
             </p>
 
             <p v-if="show_whale">
@@ -174,13 +181,21 @@
                 <svg class="icon">
                   <use href="/images/svgdefs.svg#icon-social-telegram-small" />
                 </svg><span data-id="nextstep_contact">Contact us on Telegram</span></a>
+              <a href="https://t.me/tzlibre" target="_blank" class="btn">
+                <svg class="icon">
+                  <use href="/images/svgdefs.svg#icon-social-telegram-channel" />
+                </svg><span data-id="nextstep_channel">Telegram updates</span></a>
             </p>
 
             <p v-if="show_bad_guy">
               <a href="https://t.me/joinchat/G9-DflKOVmNQIOUAoplCxQ" target="_blank" class="btn">
                 <svg class="icon">
                   <use href="/images/svgdefs.svg#icon-social-telegram-group" />
-                </svg><span data-id="nextstep_group">Join the community on Telegram</span></a>
+                </svg><span data-id="nextstep_group">Airdrop details</span></a>
+              <a href="https://t.me/tzlibre" target="_blank" class="btn">
+                <svg class="icon">
+                  <use href="/images/svgdefs.svg#icon-social-telegram-channel" />
+                </svg><span data-id="nextstep_channel">Telegram updates</span></a>
             </p>
 
           </div>
@@ -198,7 +213,7 @@
               <p data-id="modal_notwhitelisted_text">Your address is not whitelisted. In order to claim TZL you must whitelist your Tezos address first.</p>
               <div class="modal-actions">
                 <a class="btn modal-action-cancel" data-id="btn_cancel">Cancel</a>
-                <a class="btn btn-primary" href="whitelist.html" data-id="btn_whitelistit">Whitelist it</a>
+                <a class="btn btn-primary" href="whitelist.html" data-id="btn_whitelistit">Whitelist</a>
               </div>
             </div>
 
@@ -276,7 +291,7 @@
       <div class="content">
         <span data-id="cta_button_actionbar"><a href="https://t.me/tzlibre" target="_blank" class="btn btn-primary"><svg class="icon"><use href="/images/svgdefs.svg#icon-social-telegram-channel"/></svg><span>Join us on Telegram</span></a>
         </span>
-        <p data-id="actionbar_text">to stay updated</p>
+        <p data-id="actionbar_text">to stay up-to-date</p>
       </div>
     </div>
 
